@@ -20,9 +20,9 @@ C:\Users\Matthieu\Desktop\CTRPF Tool\obj\Debug\CTRPFTool.pdb
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\bin\Debug\CTRPFTool.exe.config
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\bin\Debug\CTRPFTool.exe
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\bin\Debug\CTRPFTool.pdb
-C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\obj\Debug\CTRPFTool.csprojResolveAssemblyReference.cache
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\obj\Debug\CTRPFTool.MainForm.resources
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\obj\Debug\CTRPFTool.Properties.Resources.resources
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\obj\Debug\CTRPFTool.csproj.GenerateResource.Cache
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\obj\Debug\CTRPFTool.exe
 C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\obj\Debug\CTRPFTool.pdb
+C:\Users\Ryan\Documents\GitlabProjects\ctrpf-editor\obj\Debug\CTRPFTool.csprojResolveAssemblyReference.cache

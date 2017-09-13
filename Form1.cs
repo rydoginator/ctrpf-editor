@@ -273,7 +273,7 @@ namespace CTRPFTool
 
         private void gBATempThreadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://gbatemp.net");
+            System.Diagnostics.Process.Start("http://gbatemp.net/threads/release-ctrpf-data-tool-a-ctrpfdata-bin-editor.483864/");
         }
 
         private void vERSIONToolStripMenuItem_Click(object sender, EventArgs e)
