@@ -33,7 +33,18 @@
             this.B_AddCheat = new System.Windows.Forms.Button();
             this.B_RemoveCheat = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.B_OpenFile = new System.Windows.Forms.ToolStripDropDownButton();
+            this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.megaMewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rydoginatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nanquitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.gBATempThreadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.b_SaveCheat = new System.Windows.Forms.Button();
             this.RB_32 = new System.Windows.Forms.RadioButton();
             this.RB_16 = new System.Windows.Forms.RadioButton();
             this.RB_8 = new System.Windows.Forms.RadioButton();
@@ -48,17 +59,6 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.B_OpenFile = new System.Windows.Forms.ToolStripDropDownButton();
-            this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.b_SaveCheat = new System.Windows.Forms.Button();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.megaMewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rydoginatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nanquitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.gBATempThreadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -91,6 +91,7 @@
             this.B_RemoveCheat.TabIndex = 2;
             this.B_RemoveCheat.Text = "Remove";
             this.B_RemoveCheat.UseVisualStyleBackColor = true;
+            this.B_RemoveCheat.Click += new System.EventHandler(this.B_RemoveCheat_Click);
             // 
             // toolStrip1
             // 
@@ -104,6 +105,87 @@
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // B_OpenFile
+            // 
+            this.B_OpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.B_OpenFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openFileToolStripMenuItem,
+            this.saveFileToolStripMenuItem});
+            this.B_OpenFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.B_OpenFile.Name = "B_OpenFile";
+            this.B_OpenFile.Size = new System.Drawing.Size(38, 19);
+            this.B_OpenFile.Text = "File";
+            this.B_OpenFile.ToolTipText = "File";
+            this.B_OpenFile.Click += new System.EventHandler(this.B_OpenFile_Click);
+            // 
+            // openFileToolStripMenuItem
+            // 
+            this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openFileToolStripMenuItem.Text = "Open File";
+            this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
+            // 
+            // saveFileToolStripMenuItem
+            // 
+            this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveFileToolStripMenuItem.Text = "Save File";
+            this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.megaMewToolStripMenuItem,
+            this.rydoginatorToolStripMenuItem,
+            this.nanquitasToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.gBATempThreadToolStripMenuItem,
+            this.gitHubToolStripMenuItem});
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(53, 19);
+            this.toolStripButton1.Text = "About";
+            this.toolStripButton1.ToolTipText = "Credits";
+            // 
+            // megaMewToolStripMenuItem
+            // 
+            this.megaMewToolStripMenuItem.Name = "megaMewToolStripMenuItem";
+            this.megaMewToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.megaMewToolStripMenuItem.Text = "Mega Mew";
+            // 
+            // rydoginatorToolStripMenuItem
+            // 
+            this.rydoginatorToolStripMenuItem.Name = "rydoginatorToolStripMenuItem";
+            this.rydoginatorToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.rydoginatorToolStripMenuItem.Text = "rydoginator";
+            // 
+            // nanquitasToolStripMenuItem
+            // 
+            this.nanquitasToolStripMenuItem.Name = "nanquitasToolStripMenuItem";
+            this.nanquitasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.nanquitasToolStripMenuItem.Text = "Nanquitas";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
+            // 
+            // gBATempThreadToolStripMenuItem
+            // 
+            this.gBATempThreadToolStripMenuItem.Name = "gBATempThreadToolStripMenuItem";
+            this.gBATempThreadToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.gBATempThreadToolStripMenuItem.Text = "GBATemp Thread";
+            this.gBATempThreadToolStripMenuItem.Click += new System.EventHandler(this.gBATempThreadToolStripMenuItem_Click);
+            // 
+            // gitHubToolStripMenuItem
+            // 
+            this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.gitHubToolStripMenuItem.Text = "GitHub";
+            this.gitHubToolStripMenuItem.Click += new System.EventHandler(this.gitHubToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -124,6 +206,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cheats";
             // 
+            // b_SaveCheat
+            // 
+            this.b_SaveCheat.Location = new System.Drawing.Point(35, 123);
+            this.b_SaveCheat.Name = "b_SaveCheat";
+            this.b_SaveCheat.Size = new System.Drawing.Size(135, 23);
+            this.b_SaveCheat.TabIndex = 6;
+            this.b_SaveCheat.Text = "Save Cheat";
+            this.b_SaveCheat.UseVisualStyleBackColor = true;
+            this.b_SaveCheat.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RB_32
             // 
             this.RB_32.AutoSize = true;
@@ -134,6 +226,7 @@
             this.RB_32.TabStop = true;
             this.RB_32.Text = "4 Bytes";
             this.RB_32.UseVisualStyleBackColor = true;
+            this.RB_32.CheckedChanged += new System.EventHandler(this.RB_32_CheckedChanged);
             // 
             // RB_16
             // 
@@ -145,6 +238,7 @@
             this.RB_16.TabStop = true;
             this.RB_16.Text = "2 Bytes";
             this.RB_16.UseVisualStyleBackColor = true;
+            this.RB_16.CheckedChanged += new System.EventHandler(this.RB_16_CheckedChanged);
             // 
             // RB_8
             // 
@@ -161,6 +255,7 @@
             // TB_CheatValue
             // 
             this.TB_CheatValue.Location = new System.Drawing.Point(70, 69);
+            this.TB_CheatValue.MaxLength = 8;
             this.TB_CheatValue.Name = "TB_CheatValue";
             this.TB_CheatValue.Size = new System.Drawing.Size(100, 20);
             this.TB_CheatValue.TabIndex = 5;
@@ -178,6 +273,7 @@
             // TB_CheatAddress
             // 
             this.TB_CheatAddress.Location = new System.Drawing.Point(70, 43);
+            this.TB_CheatAddress.MaxLength = 8;
             this.TB_CheatAddress.Name = "TB_CheatAddress";
             this.TB_CheatAddress.Size = new System.Drawing.Size(100, 20);
             this.TB_CheatAddress.TabIndex = 3;
@@ -196,6 +292,7 @@
             // TB_CheatName
             // 
             this.TB_CheatName.Location = new System.Drawing.Point(70, 17);
+            this.TB_CheatName.MaxLength = 50;
             this.TB_CheatName.Name = "TB_CheatName";
             this.TB_CheatName.Size = new System.Drawing.Size(100, 20);
             this.TB_CheatName.TabIndex = 1;
@@ -264,96 +361,6 @@
             this.checkBox1.Text = "Auto save enabled cheats";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // B_OpenFile
-            // 
-            this.B_OpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.B_OpenFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openFileToolStripMenuItem,
-            this.saveFileToolStripMenuItem});
-            this.B_OpenFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.B_OpenFile.Name = "B_OpenFile";
-            this.B_OpenFile.Size = new System.Drawing.Size(38, 19);
-            this.B_OpenFile.Text = "File";
-            this.B_OpenFile.ToolTipText = "File";
-            this.B_OpenFile.Click += new System.EventHandler(this.B_OpenFile_Click);
-            // 
-            // openFileToolStripMenuItem
-            // 
-            this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.openFileToolStripMenuItem.Text = "Open File";
-            this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
-            // 
-            // saveFileToolStripMenuItem
-            // 
-            this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveFileToolStripMenuItem.Text = "Save File";
-            this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
-            // 
-            // b_SaveCheat
-            // 
-            this.b_SaveCheat.Location = new System.Drawing.Point(35, 123);
-            this.b_SaveCheat.Name = "b_SaveCheat";
-            this.b_SaveCheat.Size = new System.Drawing.Size(135, 23);
-            this.b_SaveCheat.TabIndex = 6;
-            this.b_SaveCheat.Text = "Save Cheat";
-            this.b_SaveCheat.UseVisualStyleBackColor = true;
-            this.b_SaveCheat.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.megaMewToolStripMenuItem,
-            this.rydoginatorToolStripMenuItem,
-            this.nanquitasToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.gBATempThreadToolStripMenuItem,
-            this.gitHubToolStripMenuItem});
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(53, 19);
-            this.toolStripButton1.Text = "About";
-            this.toolStripButton1.ToolTipText = "Credits";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // megaMewToolStripMenuItem
-            // 
-            this.megaMewToolStripMenuItem.Name = "megaMewToolStripMenuItem";
-            this.megaMewToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.megaMewToolStripMenuItem.Text = "Mega Mew";
-            // 
-            // rydoginatorToolStripMenuItem
-            // 
-            this.rydoginatorToolStripMenuItem.Name = "rydoginatorToolStripMenuItem";
-            this.rydoginatorToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.rydoginatorToolStripMenuItem.Text = "rydoginator";
-            // 
-            // nanquitasToolStripMenuItem
-            // 
-            this.nanquitasToolStripMenuItem.Name = "nanquitasToolStripMenuItem";
-            this.nanquitasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.nanquitasToolStripMenuItem.Text = "Nanquitas";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
-            // 
-            // gBATempThreadToolStripMenuItem
-            // 
-            this.gBATempThreadToolStripMenuItem.Name = "gBATempThreadToolStripMenuItem";
-            this.gBATempThreadToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.gBATempThreadToolStripMenuItem.Text = "GBATemp Thread";
-            // 
-            // gitHubToolStripMenuItem
-            // 
-            this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
-            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.gitHubToolStripMenuItem.Text = "GitHub";
             // 
             // MainForm
             // 
