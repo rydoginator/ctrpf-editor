@@ -15,10 +15,11 @@ namespace CTRPFTool
 {
     public partial class MainForm : Form
     {
-
+        string version = "v1.0";
         public MainForm()
         {
             InitializeComponent();
+            vERSIONToolStripMenuItem.Text = version;
         }
         List<byte> data = new List<byte>();
         String path;
@@ -267,12 +268,17 @@ namespace CTRPFTool
 
         private void gitHubToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://google.com");
+            System.Diagnostics.Process.Start("https://github.com/RyDog199/ctrpf-editor");
         }
 
         private void gBATempThreadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://gbatemp.net");
+        }
+
+        private void vERSIONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/RyDog199/ctrpf-editor/releases/");
         }
     }
 }
