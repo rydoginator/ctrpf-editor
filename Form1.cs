@@ -213,6 +213,7 @@ namespace CTRPFTool
                 data[0x40 + (0x40 * index) + i] = CheatData[i];
             }
             MessageBox.Show("Cheat saved!");
+            PopulateList();
         }
 
         private void RB_8_CheckedChanged(object sender, EventArgs e)
