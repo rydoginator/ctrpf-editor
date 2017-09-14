@@ -15,7 +15,7 @@ namespace CTRPFTool
 {
     public partial class MainForm : Form
     {
-        string version = "v1.0";
+        string version = "v1.0.1";
         public MainForm()
         {
             InitializeComponent();
@@ -136,7 +136,7 @@ namespace CTRPFTool
                     byte[] tmp;
                     path = openFileDialog.FileName;
                     tmp = File.ReadAllBytes(path);
-                    if (tmp.Length > 0x40 && tmp.Length < 10000) //check the size of the file
+                    if (tmp.Length > 0x80 && tmp.Length == 0x80 + tmp[0x34] * 0x40 && tmp.Length % 0x40 == 0) //check the integrity of the file
                     {
                         data.AddRange(tmp);
                         PopulateList();
@@ -253,6 +253,7 @@ namespace CTRPFTool
             {
                 data.RemoveAt(0x40 + (0x40 * index) + i);
             }
+            data[0x34]--;
             PopulateList();
         }
 
